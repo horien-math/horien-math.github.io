@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Générateur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="verifierAccesAdmin()">
+
+    <!-- En-tête Admin -->
+    <header>
+        <div class="header-content">
+            <h1>⚙️ Espace Administrateur</h1>
+            <button class="btn-logout" onclick="sessionStorage.clear(); window.location.href='index.html';">Se déconnecter</button>
+        </div>
+    </header>
+
+    <!-- Contenu principal : Le Keygen -->
+    <main class="login-wrapper">
+        <!-- On réutilise le style de la carte de connexion, mais on change la couleur de la bordure du haut -->
+        <div class="login-card" style="border-top: 5px solid #e74c3c;">
+            <h2>Générateur d'accès</h2>
+            <p>Entrez le nom d'un étudiant pour obtenir son mot de passe de connexion.</p>
+            
+            <div class="form-group">
+                <input type="text" id="input-eleve" placeholder="Nom de l'étudiant (ex: tanjona)">
+            </div>
+            
+            <!-- Bouton rouge pour l'admin -->
+            <button onclick="afficherMotDePasseAdmin()" style="background-color: #e74c3c;">Générer le code</button>
+
+            <!-- Zone où le mot de passe va s'afficher -->
+            <div style="margin-top: 25px; min-height: 80px;">
+                <p id="resultat-mdp" style="color: #2c3e50; font-size: 16px;"></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Le pied de page -->
+    <footer>&copy; Horien 2026</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
