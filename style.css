@@ -1,0 +1,184 @@
+/* Importation de la police d'écriture moderne 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6; /* Fond bleu-gris très clair */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Permet au footer de rester en bas */
+}
+
+/* ----- Design de la page de Connexion ----- */
+.login-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Ombre douce */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.logo-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.login-card h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.login-card p {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db; /* Bleu moderne */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98); /* Petit effet de clic */
+}
+
+/* ----- Design de la page des Cours ----- */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-content h1 {
+    color: #2c3e50;
+    font-size: 22px;
+}
+
+.btn-logout {
+    width: auto;
+    background-color: #e74c3c; /* Rouge doux pour la déconnexion */
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+.courses-container {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.chapter-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border-left: 5px solid #3498db; /* Ligne bleue sur le côté */
+}
+
+.chapter-card h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.chapter-card ul {
+    list-style: none;
+}
+
+.chapter-card li {
+    margin-bottom: 10px;
+}
+
+.chapter-card a {
+    text-decoration: none;
+    color: #34495e;
+    font-size: 15px;
+    display: block;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    transition: background-color 0.2s, color 0.2s, padding-left 0.2s;
+}
+
+.chapter-card a:hover {
+    background-color: #3498db;
+    color: white;
+    padding-left: 20px; /* Petit effet de glissement au survol */
+}
+
+/* ----- Design du Footer (Pied de page) ----- */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #95a5a6;
+    font-size: 14px;
+    margin-top: auto; /* Pousse toujours le footer tout en bas */
+}
