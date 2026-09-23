@@ -2,19 +2,32 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Portail de Mathématiques - Connexion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important pour les mobiles -->
+    <title>Let's Math It ! - Connexion</title>
+    <!-- On lie le fichier de style -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: Arial, sans-serif; text-align: center; margin-top: 100px;">
+<body>
 
-    <!-- Modification 1 : Le nouveau titre -->
-    <h1>Let's Math It !</h1>
-    <p>Veuillez entrer vos identifiants pour accéder aux PDF.</p>
-
-    <div style="border: 1px solid #ccc; padding: 20px; width: 300px; margin: 0 auto; border-radius: 10px;">
-        <input type="text" id="username" placeholder="Nom d'utilisateur" style="margin-bottom: 10px; width: 90%; padding: 5px;"><br>
-        <input type="password" id="password" placeholder="Mot de passe" style="margin-bottom: 10px; width: 90%; padding: 5px;"><br>
-        <button onclick="verifierConnexion()" style="padding: 10px 20px; cursor: pointer;">Se connecter</button>
+    <div class="login-wrapper">
+        <div class="login-card">
+            <div class="logo-icon">📐</div>
+            <h1>Let's Math It !</h1>
+            <p>Veuillez entrer vos identifiants pour accéder aux cours.</p>
+            
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Nom d'utilisateur">
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Mot de passe">
+            </div>
+            
+            <button onclick="verifierConnexion()">Se connecter</button>
+        </div>
     </div>
+
+    <!-- Le pied de page demandé -->
+    <footer>&copy; Horien 2026</footer>
 
     <script src="script.js"></script>
 </body>
