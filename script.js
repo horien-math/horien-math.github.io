@@ -1,6 +1,5 @@
-// Fonction KEYGEN : Calcule le mot de passe à partir du pseudo
+// Fonction KEYGEN
 function genererMotDePasse(username) {
-    // Tout mettre en minuscules pour éviter les erreurs de majuscules
     let user = username.toLowerCase().trim();
     let codes = [];
     
@@ -9,19 +8,21 @@ function genererMotDePasse(username) {
         codes.push(user.charCodeAt(i));
     }
     
-    // 2. Permutation : on inverse l'ordre des chiffres
+    // 2. Permutation : on inverse l'ordre
     codes.reverse();
     
-    // 3. On colle tous les chiffres ensemble pour faire le mot de passe
-    return codes.join("");
+    // 3. On colle tous les chiffres ensemble
+    let motDePasseComplet = codes.join("");
+    
+    // Modification 2 : On ne garde que les 4 premiers caractères
+    return motDePasseComplet.substring(0, 4);
 }
 
-// Fonction de vérification lors du clic sur "Se connecter"
 function verifierConnexion() {
-    let usernameInput = document.getElementById("username").value;
-    let passwordInput = document.getElementById("password").value;
+    // On ajoute .trim() pour enlever les espaces tapés par erreur
+    let usernameInput = document.getElementById("username").value.trim();
+    let passwordInput = document.getElementById("password").value.trim();
     
-    // On génère le mot de passe attendu pour cet utilisateur
     let motDePasseAttendu = genererMotDePasse(usernameInput);
     
     if (usernameInput === "") {
@@ -29,21 +30,30 @@ function verifierConnexion() {
         return;
     }
     
-    // On compare ce que l'étudiant a tapé avec le Keygen
     if (passwordInput === motDePasseAttendu) {
-        // Succès ! On enregistre la session et on redirige
+        // Succès ! On enregistre la session ET le nom d'utilisateur
         sessionStorage.setItem("estConnecte", "oui");
+        sessionStorage.setItem("nomUtilisateur", usernameInput);
         window.location.href = "cours.html";
     } else {
-        // Échec
         alert("Mot de passe incorrect.");
     }
 }
 
-// Fonction pour protéger la page des cours
+// Fonction pour protéger la page des cours et afficher le message personnalisé
 function verifierAccesCours() {
-    // Si l'étudiant n'est pas passé par la connexion, on le renvoie à l'accueil
     if (sessionStorage.getItem("estConnecte") !== "oui") {
         window.location.href = "index.html";
+        return; // On stoppe l'exécution si non connecté
+    }
+    
+    // Modification 4 : Récupérer le nom et mettre la première lettre en majuscule
+    let username = sessionStorage.getItem("nomUtilisateur");
+    if (username) {
+        // Met la première lettre en majuscule et le reste en minuscule
+        let nomFormate = username.charAt(0).toUpperCase() + username.slice(1).toLowerCase();
+        
+        // On injecte ce texte dans la balise qui a l'ID 'message-bienvenue'
+        document.getElementById("message-bienvenue").innerText = "Bonjour " + nomFormate;
     }
 }
