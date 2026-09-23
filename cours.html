@@ -2,25 +2,44 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Cours de Mathématiques</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: Arial, sans-serif; padding: 20px;" onload="verifierAccesCours()">
+<body onload="verifierAccesCours()">
 
-    <!-- Modification 4 : La balise qui recevra "Bonjour [Nom]" -->
-    <h1 id="message-bienvenue">Chargement...</h1>
-    
-    <button onclick="sessionStorage.clear(); window.location.href='index.html';" style="margin-bottom: 20px;">Se déconnecter</button>
-    
-    <h2>Chapitre 1 : Les Fonctions</h2>
-    <ul>
-        <li><a href="pdfs/lecon1_fonctions.pdf" target="_blank">Leçon : Introduction aux fonctions (PDF)</a></li>
-        <li><a href="pdfs/exo1_fonctions.pdf" target="_blank">Exercices : Fonctions (PDF)</a></li>
-    </ul>
+    <!-- En-tête de la page -->
+    <header>
+        <div class="header-content">
+            <h1 id="message-bienvenue">Chargement...</h1>
+            <button class="btn-logout" onclick="sessionStorage.clear(); window.location.href='index.html';">Se déconnecter</button>
+        </div>
+    </header>
 
-    <h2>Chapitre 2 : Les Probabilités</h2>
-    <ul>
-        <li><a href="pdfs/lecon2_proba.pdf" target="_blank">Leçon : Les probabilités (PDF)</a></li>
-    </ul>
+    <!-- Contenu principal -->
+    <main class="courses-container">
+        
+        <!-- Carte pour le Chapitre 1 -->
+        <div class="chapter-card">
+            <h2>Chapitre 1 : Les Fonctions</h2>
+            <ul>
+                <li><a href="pdfs/lecon1_fonctions.pdf" target="_blank">📄 Leçon : Introduction aux fonctions</a></li>
+                <li><a href="pdfs/exo1_fonctions.pdf" target="_blank">📝 Exercices : Fonctions</a></li>
+            </ul>
+        </div>
+
+        <!-- Carte pour le Chapitre 2 -->
+        <div class="chapter-card">
+            <h2>Chapitre 2 : Les Probabilités</h2>
+            <ul>
+                <li><a href="pdfs/lecon2_proba.pdf" target="_blank">📄 Leçon : Les probabilités</a></li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- Le pied de page demandé -->
+    <footer>&copy; Horien 2026</footer>
 
     <script src="script.js"></script>
 </body>
