@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Cours de Mathématiques</title>
+    <title>Let's Math It ! - Espace Cours</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="verifierAccesCours()">
 
-    <!-- En-tête de la page -->
+    <!-- En-tête de la page avec message personnalisé et bouton de déconnexion -->
     <header>
         <div class="header-content">
             <h1 id="message-bienvenue">Chargement...</h1>
@@ -16,31 +16,48 @@
         </div>
     </header>
 
-    <!-- Contenu principal -->
+    <!-- Contenu principal : Les chapitres de cours et d'exercices -->
     <main class="courses-container">
         
-        <!-- Carte pour le Chapitre 1 -->
+        <!-- Chapitre 1 -->
         <div class="chapter-card">
-            <h2>Chapitre 1 : Les Fonctions</h2>
+            <h2>Chapitre 1 : Étude des Fonctions</h2>
             <ul>
-                <li><a href="pdfs/lecon1_fonctions.pdf" target="_blank">📄 Leçon : Introduction aux fonctions</a></li>
-                <li><a href="pdfs/exo1_fonctions.pdf" target="_blank">📝 Exercices : Fonctions</a></li>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c1_lecon1_domaine.pdf')">📄 Leçon 1 : Domaine de définition et Parité</a></li>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c1_exo1_domaine.pdf')">📝 Exercices : Déterminer le domaine de définition</a></li>
+                <br>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c1_lecon2_limites.pdf')">📄 Leçon 2 : Les Limites et Asymptotes</a></li>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c1_exo2_limites.pdf')">📝 Exercices : Calculs, levées d'indéterminations et asymptotes</a></li>
+                <br>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c1_lecon3_derivation.pdf')">📄 Leçon 3 : Dérivation et Continuité</a></li>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c1_exo3_derivation.pdf')">📝 Exercices : Calculs de dérivées et tangentes</a></li>
+                <br>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c1_lecon4_variations.pdf')">📄 Leçon 4 : Tableaux de variations et Tracé de courbes</a></li>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c1_exo4_variations.pdf')">📝 Exercices : Études complètes de A à Z</a></li>
             </ul>
         </div>
 
-        <!-- Carte pour le Chapitre 2 -->
+        <!-- Chapitre 2 -->
         <div class="chapter-card">
-            <h2>Chapitre 2 : Les Probabilités</h2>
+            <h2>Chapitre 2 : Les Suites Numériques</h2>
             <ul>
-                <li><a href="pdfs/lecon2_proba.pdf" target="_blank">📄 Leçon : Les probabilités</a></li>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c2_lecon1_arithmetiques.pdf')">📄 Leçon 1 : Généralités et Suites Arithmétiques</a></li>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c2_exo1_arithmetiques.pdf')">📝 Exercices : Suites arithmétiques</a></li>
+                <br>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c2_geometriques.pdf')">📄 Leçon 2 : Les Suites Géométriques</a></li>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c2_exo2_geometriques.pdf')">📝 Exercices : Suites géométriques</a></li>
+                <br>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c2_lecon3_limites.pdf')">📄 Leçon 3 : Sens de variation et Limites de suites</a></li>
+                <li><a href="#" onclick="ouvrirPDF(event, 'pdfs/c2_exo3_limites.pdf')">📝 Exercices : Calculs de limites de suites</a></li>
             </ul>
         </div>
 
     </main>
 
-    <!-- Le pied de page demandé -->
+    <!-- Pied de page -->
     <footer>&copy; Horien 2026</footer>
 
+    <!-- Script JavaScript principal -->
     <script src="script.js"></script>
 </body>
 </html>
