@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mes Cours de Mathématiques</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;" onload="verifierAccesCours()">
+    <!-- L'attribut onload lance la vérification de sécurité au chargement de la page -->
+
+    <h1>Espace Étudiant - Cours et Exercices</h1>
+    <button onclick="sessionStorage.removeItem('estConnecte'); window.location.href='index.html';">Se déconnecter</button>
+    
+    <h2>Chapitre 1 : Les Fonctions</h2>
+    <ul>
+        <!-- Voici comment lier un PDF -->
+        <!-- Assurez-vous que le nom du fichier ici correspond exactement au nom du fichier dans le dossier 'pdfs' -->
+        <li><a href="pdfs/lecon1_fonctions.pdf" target="_blank">Leçon : Introduction aux fonctions (PDF)</a></li>
+        <li><a href="pdfs/exo1_fonctions.pdf" target="_blank">Exercices : Fonctions (PDF)</a></li>
+    </ul>
+
+    <h2>Chapitre 2 : Les Probabilités</h2>
+    <ul>
+        <li><a href="pdfs/lecon2_proba.pdf" target="_blank">Leçon : Les probabilités (PDF)</a></li>
+    </ul>
+
+    <!-- On relie le script pour la fonction verifierAccesCours() -->
+    <script src="script.js"></script>
+</body>
+</html>
