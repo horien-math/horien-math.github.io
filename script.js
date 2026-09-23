@@ -81,3 +81,24 @@ function afficherMotDePasseAdmin() {
     // On affiche le résultat joliment
     affichageResultat.innerHTML = "Mot de passe pour <b>" + inputEleve + "</b> : <br><br><span style='font-size: 32px; font-weight: bold; color: #2c3e50; background: #ecf0f1; padding: 10px 20px; border-radius: 8px;'>" + mdp + "</span>";
 }
+// --- NOUVEAU : Fonction pour vérifier si le PDF existe avant de l'ouvrir ---
+async function ouvrirPDF(event, urlDuFichier) {
+    // On empêche le clic normal du lien
+    event.preventDefault(); 
+    
+    try {
+        // On "toque" à la porte du fichier pour voir s'il est là
+        let reponse = await fetch(urlDuFichier, { method: 'HEAD' });
+        
+        if (reponse.ok) {
+            // Le fichier existe (Code 200), on l'ouvre dans un nouvel onglet
+            window.open(urlDuFichier, '_blank');
+        } else {
+            // Le fichier n'existe pas (Code 404)
+            alert("Désolé, ce document n'est pas encore disponible pour le moment !");
+        }
+    } catch (erreur) {
+        // En cas de problème de connexion
+        alert("Désolé, impossible de vérifier la disponibilité du document.");
+    }
+}
