@@ -2,17 +2,23 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important pour les mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's Math It ! - Connexion</title>
-    <!-- On lie le fichier de style -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="login-wrapper">
+    <!-- On ajoute le même en-tête que sur la page des cours, mais centré -->
+    <header>
+        <div class="header-content" style="justify-content: center; text-align: center;">
+            <h1>📐 Let's Math It !</h1>
+        </div>
+    </header>
+
+    <!-- Le contenu principal (la carte de connexion) -->
+    <main class="login-wrapper">
         <div class="login-card">
-            <div class="logo-icon">📐</div>
-            <h1>Let's Math It !</h1>
+            <h2>Espace Étudiant</h2>
             <p>Veuillez entrer vos identifiants pour accéder aux cours.</p>
             
             <div class="form-group">
@@ -24,9 +30,9 @@
             
             <button onclick="verifierConnexion()">Se connecter</button>
         </div>
-    </div>
+    </main>
 
-    <!-- Le pied de page demandé -->
+    <!-- Le pied de page bien ancré en bas -->
     <footer>&copy; Horien 2026</footer>
 
     <script src="script.js"></script>
